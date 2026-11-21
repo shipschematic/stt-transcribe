@@ -1,11 +1,22 @@
-# Python-generated files
+# Python
 __pycache__/
-*.py[oc]
+*.py[cod]
+.venv/
 build/
 dist/
 wheels/
-*.egg-info
+*.egg-info/
 
-# Virtual environments
-.venv
-subtitle-translator/
+# Local environment
+.env
+
+# Local data
+input/*
+output/*
+!input/.gitkeep
+!output/.gitkeep
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/

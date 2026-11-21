@@ -1,0 +1,22 @@
+[project]
+name = "stt-transcribe"
+version = "0.1.0"
+description = "Transcribe media with faster-whisper and translate subtitles."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "faster-whisper>=1.2.1",
+    "nvidia-cublas-cu12>=12.9.2.10",
+    "nvidia-cudnn-cu12>=9.25.0.15",
+]
+
+[project.scripts]
+stt-transcribe = "stt_transcribe.transcribe:main"
+stt-translate = "stt_transcribe.translate:main"
+
+[build-system]
+requires = ["uv_build>=0.12.20,<0.13.0"]
+build-backend = "uv_build"
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cu124"
